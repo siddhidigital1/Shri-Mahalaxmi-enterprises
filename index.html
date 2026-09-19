@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>श्री महालक्ष्मी एंटरप्राईजेस - किचन ट्रॉलीज् ॲण्ड हार्डवेअर</title>
+  <title>Shree Mahalaxmi Enterprises - Kitchen Trolleys & Hardware</title>
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts: Inter & Poppins -->
+  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -15,7 +15,7 @@
       --primary: #b91c1c;       /* Premium Kitchen Red */
       --secondary: #991b1b;
       --accent: #d97706;        /* Warm Wood/Gold accent */
-      --navy: #0f172a;          /* Logo navy background tone */
+      --navy: #0f172a;          /* Dark navy tone */
       --surface: #ffffff;
       --bg: #f8fafc;
       --text: #1e293b;
@@ -276,11 +276,40 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
+    .product-img-wrap {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.04);
+    }
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fef08a;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
+    }
     .product-body {
       padding: 14px;
     }
     .product-title {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 6px;
@@ -290,14 +319,6 @@
       color: var(--muted);
       line-height: 1.5;
       margin-bottom: 12px;
-    }
-    .product-banner-svg {
-      width: 100%;
-      height: 170px;
-      border-radius: 10px;
-      display: block;
-      margin-bottom: 12px;
-      box-shadow: 0 3px 10px rgba(185, 28, 28, 0.12);
     }
     .enquiry-btn {
       display: inline-block;
@@ -530,11 +551,11 @@
     <div class="hero" id="home">
       <div class="views-counter"><i class="fa-solid fa-eye"></i> Views: <b>1,420</b></div>
       <div class="avatar-wrap">
-        <img src="logo.png" alt="श्री महालक्ष्मी एंटरप्राईजेस लोगो" onerror="handleImgError(this, ['logo.jpeg', 'logo.jpg', 'Logo.png'])">
+        <img src="logo.png" alt="Shree Mahalaxmi Enterprises Logo" onerror="handleImgError(this, ['logo.jpeg', 'logo.jpg', 'Logo.png'])">
       </div>
-      <h1>श्री महालक्ष्मी एंटरप्राईजेस</h1>
-      <div class="role">किचन ट्रॉलीज् ॲण्ड हार्डवेअर</div>
-      <div class="sub-role">एस.एस. किचन ट्रॉलीज् | मॉड्युलर किचन | फर्निचर वर्क</div>
+      <h1>Shree Mahalaxmi Enterprises</h1>
+      <div class="role">Kitchen Trolleys & Hardware</div>
+      <div class="sub-role">S.S. Kitchen Trolleys | Modular Kitchen | Furniture Work</div>
     </div>
 
     <!-- QUICK CALL/WHATSAPP/LOCATION BAR -->
@@ -543,7 +564,7 @@
         <div class="icon-circle btn-call"><i class="fa-solid fa-phone"></i></div>
         Call
       </a>
-      <a href="https://wa.me/919764204215?text=नमस्कार,%20मी%20आपले%20डिजिटल%20कार्ड%20पाहिले.%20मला%20किचन%20ट्रॉलीज्%20आणि%20फर्निचरच्या%20कामाबद्दल%20माहिती%20हवी%20आहे." target="_blank" class="quick-btn">
+      <a href="https://wa.me/919764204215?text=Hello,%20I%20visited%20your%20digital%20card.%20I%20would%20like%20to%20inquire%20about%20kitchen%20trolleys%20and%20furniture%20work." target="_blank" class="quick-btn">
         <div class="icon-circle btn-wa"><i class="fa-brands fa-whatsapp"></i></div>
         WhatsApp
       </a>
@@ -558,19 +579,19 @@
       <div class="info-list">
         <a href="https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw" target="_blank" class="info-row">
           <i class="fa-solid fa-location-dot"></i>
-          <span>प्लॉट नं. १०, राजाराम चौक, टिंबर मार्केट, कोल्हापूर.</span>
+          <span>Plot No. 10, Rajaram Chowk, Timber Market, Kolhapur.</span>
         </a>
         <a href="tel:+919764204215" class="info-row">
           <i class="fa-solid fa-phone"></i>
-          <span>रोहन सुतार : +91 9764204215</span>
+          <span>Rohan Sutar: +91 9764204215</span>
         </a>
         <a href="tel:+918949284215" class="info-row">
           <i class="fa-solid fa-phone"></i>
-          <span>सुशांत सुतार : +91 8949284215</span>
+          <span>Sushant Sutar: +91 8949284215</span>
         </a>
         <div class="info-row">
           <i class="fa-solid fa-screwdriver-wrench"></i>
-          <span>किचन ट्रॉलीज् मेंटेनेंस व न्यू इन्स्टॉलेशन सुविधा</span>
+          <span>Kitchen Trolley Maintenance & New Installation Services</span>
         </div>
       </div>
 
@@ -592,19 +613,19 @@
         <div class="link-tile-left">
           <i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i>
           <div>
-            <div class="link-tile-title">Google Maps वर दुकान शोधा</div>
-            <div class="link-tile-desc">टिंबर मार्केट, राजाराम चौक, कोल्हापूर</div>
+            <div class="link-tile-title">Locate Us on Google Maps</div>
+            <div class="link-tile-desc">Timber Market, Rajaram Chowk, Kolhapur</div>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right" style="color:var(--primary); font-size: 13px;"></i>
       </a>
 
-      <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20किचन%20साइट%20व्हिजिट%20व%20कोटेशनसाठी%20चौकशी%20करायची%20आहे." target="_blank" class="link-tile">
+      <a href="https://wa.me/919764204215?text=Hello,%20I%20would%20like%20to%20request%20a%20site%20visit%20and%20quotation%20for%20kitchen%20work." target="_blank" class="link-tile">
         <div class="link-tile-left">
           <i class="fa-brands fa-whatsapp" style="color: var(--whatsapp);"></i>
           <div>
-            <div class="link-tile-title">WhatsApp वर कोटेशन मिळवा</div>
-            <div class="link-tile-desc">किचन ट्रॉलीज् व फर्निचर एस्टिमेट</div>
+            <div class="link-tile-title">Get Free Quotation on WhatsApp</div>
+            <div class="link-tile-desc">Kitchen Trolleys & Furniture Estimates</div>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right" style="color:var(--primary); font-size: 13px;"></i>
@@ -613,147 +634,68 @@
 
     <!-- ABOUT US SECTION -->
     <div class="section" id="about">
-      <div class="section-header">आमच्याबद्दल (About Us)</div>
+      <div class="section-header">About Us</div>
       <p style="font-size: 13px; color: #475569; line-height: 1.6;">
-        <strong>श्री महालक्ष्मी एंटरप्राईजेस</strong> मध्ये आपले सहर्ष स्वागत आहे! आम्ही दर्जेदार व मजबूत <strong>एस.एस. (Stainless Steel) किचन ट्रॉलीज्, मॉड्युलर किचन, आधुनिक हार्डवेअर आणि सर्व प्रकारचे फर्निचर वर्क</strong> ग्राहकांच्या आवडीनुसार व योग्य दरात करून देतो. तसेच जुन्या किचन ट्रॉलीज् मेंटेनेंस व दुरुस्तीची खास सुविधा उपलब्ध आहे.
+        Welcome to <strong>Shree Mahalaxmi Enterprises</strong>! We provide top-grade <strong>Stainless Steel (S.S.) Kitchen Trolleys, Modular Kitchens, Modern Architectural Hardware, and Custom Furniture Solutions</strong> tailored to your aesthetic preferences and budget. We also specialize in trolley track servicing, alignment, and full renovation of existing setups.
       </p>
 
-      <div class="section-header" style="margin-top: 18px; font-size: 13.5px; border-bottom: none; padding-bottom: 0;">आमच्या सेवा (Our Specialities)</div>
+      <div class="section-header" style="margin-top: 18px; font-size: 13.5px; border-bottom: none; padding-bottom: 0;">Our Specialities</div>
       <div class="pill-grid">
-        <div class="pill">✨ एस.एस. किचन ट्रॉलीज्</div>
-        <div class="pill">🍳 मॉड्युलर किचन ट्रॉलीज्</div>
-        <div class="pill">🔧 किचन ट्रॉलीज् मेंटेनेंस सुविधा</div>
-        <div class="pill">🪑 फर्निचर वर्क</div>
-        <div class="pill">🔩 किचन ॲण्ड होम हार्डवेअर</div>
+        <div class="pill">✨ S.S. Kitchen Trolleys</div>
+        <div class="pill">🍳 Modular Kitchen Units</div>
+        <div class="pill">🔧 Kitchen Trolley Maintenance</div>
+        <div class="pill">🪑 Custom Home & Office Furniture</div>
+        <div class="pill">🔩 Premium Architectural Hardware</div>
       </div>
     </div>
 
     <!-- SERVICES / PRODUCTS SECTION -->
     <div class="section" id="services">
-      <div class="section-header">आमची उत्पादने व सेवा (Services)</div>
+      <div class="section-header">Our Products & Services</div>
 
       <!-- Service 1: Modular Kitchen -->
       <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Modular Kitchen and SS Trolleys">
+          <span class="product-badge">BEST QUALITY</span>
+        </div>
         <div class="product-body">
-          <div class="product-title">✨ मॉड्युलर किचन व एस.एस. ट्रॉलीज्</div>
-          <div class="product-desc">प्रिमियम क्वालिटी स्टेनलेस स्टील ट्रॉलीज्, बास्केट्स, आणि आधुनिक डिझाइनसह मॉड्युलर किचन सेटअप. टिकाऊ आणि गंज-प्रतिरोधक काम.</div>
-          
-          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="kitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#0f172a" />
-                <stop offset="50%" stop-color="#1e293b" />
-                <stop offset="100%" stop-color="#991b1b" />
-              </linearGradient>
-              <linearGradient id="goldK1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#fef08a" />
-                <stop offset="50%" stop-color="#f59e0b" />
-                <stop offset="100%" stop-color="#d97706" />
-              </linearGradient>
-            </defs>
-            <rect width="500" height="240" rx="14" fill="url(#kitGrad1)" />
-            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
-            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
-            
-            <g transform="translate(45, 65)" stroke="url(#goldK1)" stroke-width="2" fill="none">
-              <rect x="0" y="10" width="70" height="70" rx="4"/>
-              <line x1="0" y1="35" x2="70" y2="35"/>
-              <line x1="0" y1="60" x2="70" y2="60"/>
-              <line x1="25" y1="22" x2="45" y2="22" stroke-width="3"/>
-              <line x1="25" y1="47" x2="45" y2="47" stroke-width="3"/>
-              <line x1="25" y1="72" x2="45" y2="72" stroke-width="3"/>
-            </g>
-
-            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">SHREE MAHALAXMI</text>
-            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">MODULAR KITCHEN TROLLEYS</text>
-            <text x="140" y="142" fill="#fecaca" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">S.S. Baskets • Soft Close • Custom Designs</text>
-            
-            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
-            <text x="222" y="177" fill="#0f172a" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">BEST QUALITY WORK</text>
-          </svg>
-          
-          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20एस.एस.%20किचन%20ट्रॉलीज्%20कामाबद्दल%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर चौकशी करा</a>
+          <div class="product-title">✨ Modular Kitchen & S.S. Trolleys</div>
+          <div class="product-desc">Premium quality Stainless Steel trolleys, wire baskets, pull-out racks, and soft-close modular setups engineered for rust resistance and long life.</div>
+          <a href="https://wa.me/919764204215?text=Hello,%20I%20am%20interested%20in%20Stainless%20Steel%20Kitchen%20Trolleys." target="_blank" class="enquiry-btn">Inquire on WhatsApp</a>
         </div>
       </div>
 
       <!-- Service 2: Maintenance & Repair -->
       <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80" alt="Kitchen Trolley Maintenance and Repair">
+          <span class="product-badge">FAST RESOLUTION</span>
+        </div>
         <div class="product-body">
-          <div class="product-title">🔧 किचन ट्रॉलीज् मेंटेनेंस व रिपेअरिंग</div>
-          <div class="product-desc">जुन्या किचन ट्रॉलीज् चॅनल बदलणे, री-अलाइनमेंट, बास्केट दुरुस्ती आणि जलद व खात्रीशीर मेंटेनेंस सर्व्हिस.</div>
-          
-          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="kitGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#450a0a" />
-                <stop offset="50%" stop-color="#7f1d1d" />
-                <stop offset="100%" stop-color="#b91c1c" />
-              </linearGradient>
-            </defs>
-            <rect width="500" height="240" rx="14" fill="url(#kitGrad2)" />
-            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
-            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
-            
-            <g transform="translate(50, 70)" stroke="url(#goldK1)" stroke-width="2.5" fill="none" stroke-linecap="round">
-              <path d="M10 50 L45 15"/>
-              <path d="M40 10 L50 20"/>
-              <circle cx="20" cy="40" r="10"/>
-              <path d="M25 55 L55 25"/>
-            </g>
-
-            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">FAST SERVICE</text>
-            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">TROLLEY MAINTENANCE</text>
-            <text x="140" y="142" fill="#fecaca" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">Channel Repair • Replacement • Servicing</text>
-            
-            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
-            <text x="222" y="177" fill="#450a0a" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">QUICK RESOLUTION</text>
-          </svg>
-          
-          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20किचन%20ट्रॉलीज्%20दुरुस्ती%20व%20मेंटेनेंसबद्दल%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर संपर्क करा</a>
+          <div class="product-title">🔧 Kitchen Trolley Maintenance & Repairs</div>
+          <div class="product-desc">Quick track/channel replacement, basket re-alignment, rust clearance, and comprehensive servicing for smooth, effortless sliding.</div>
+          <a href="https://wa.me/919764204215?text=Hello,%20I%20need%20kitchen%20trolley%20repair%20and%20maintenance%20service." target="_blank" class="enquiry-btn">Book Repair on WhatsApp</a>
         </div>
       </div>
 
       <!-- Service 3: Furniture Work -->
       <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Custom Furniture and Interior Work">
+          <span class="product-badge">CUSTOM CRAFTED</span>
+        </div>
         <div class="product-body">
-          <div class="product-title">🪑 सर्व प्रकारचे फर्निचर वर्क</div>
-          <div class="product-desc">घरासाठी व ऑफिससाठी लागणारे वॉर्डरोब, टीव्ही युनिट, बेड, कपाट, कॅबिनेट व संपूर्ण इंटेरियर फर्निचर काम खात्रीशीरपणे करून दिले जाते.</div>
-          
-          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="kitGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#1e1b4b" />
-                <stop offset="50%" stop-color="#312e81" />
-                <stop offset="100%" stop-color="#b45309" />
-              </linearGradient>
-            </defs>
-            <rect width="500" height="240" rx="14" fill="url(#kitGrad3)" />
-            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
-            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
-            
-            <g transform="translate(48, 65)" stroke="url(#goldK1)" stroke-width="2.5" fill="none">
-              <rect x="5" y="15" width="60" height="60" rx="3"/>
-              <line x1="35" y1="15" x2="35" y2="75"/>
-              <circle cx="28" cy="45" r="2" fill="url(#goldK1)"/>
-              <circle cx="42" cy="45" r="2" fill="url(#goldK1)"/>
-            </g>
-
-            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">CUSTOM INTERIOR</text>
-            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">HOME & OFFICE FURNITURE</text>
-            <text x="140" y="142" fill="#fef3c7" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">Wardrobe • TV Unit • Bed • Cabinets</text>
-            
-            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
-            <text x="222" y="177" fill="#1e1b4b" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">MODERN FINISH</text>
-          </svg>
-          
-          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20फर्निचरच्या%20कामाबाबत%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर बोला</a>
+          <div class="product-title">🪑 Custom Furniture & Interior Solutions</div>
+          <div class="product-desc">Complete residential and office furniture including sliding wardrobes, TV units, beds, crockery units, and storage cabinets with modern finishes.</div>
+          <a href="https://wa.me/919764204215?text=Hello,%20I%20am%20interested%20in%20custom%20furniture%20and%20interior%20work." target="_blank" class="enquiry-btn">Chat on WhatsApp</a>
         </div>
       </div>
     </div>
 
-    <!-- PHOTOS GALLERY SECTION -->
+    <!-- PHOTOS GALLERY SECTION (25 Photos) -->
     <div class="section" id="gallery">
-      <div class="section-header">कामाचे फोटो (Photo Gallery)</div>
+      <div class="section-header">Work Gallery (25 Projects)</div>
       <div class="gallery-grid">
         <div class="gallery-item" onclick="openLightbox('photo1.jpg')"><img src="photo1.jpg" alt="Kitchen Work 1" loading="lazy" onerror="handleImgError(this, ['photo1.jpeg', 'photo1.png', 'photo1.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo2.jpg')"><img src="photo2.jpg" alt="Kitchen Work 2" loading="lazy" onerror="handleImgError(this, ['photo2.jpeg', 'photo2.png', 'photo2.JPG'])"></div>
@@ -761,12 +703,31 @@
         <div class="gallery-item" onclick="openLightbox('photo4.jpg')"><img src="photo4.jpg" alt="Kitchen Work 4" loading="lazy" onerror="handleImgError(this, ['photo4.jpeg', 'photo4.png', 'photo4.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo5.jpg')"><img src="photo5.jpg" alt="Kitchen Work 5" loading="lazy" onerror="handleImgError(this, ['photo5.jpeg', 'photo5.png', 'photo5.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo6.jpg')"><img src="photo6.jpg" alt="Kitchen Work 6" loading="lazy" onerror="handleImgError(this, ['photo6.jpeg', 'photo6.png', 'photo6.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo7.jpg')"><img src="photo7.jpg" alt="Kitchen Work 7" loading="lazy" onerror="handleImgError(this, ['photo7.jpeg', 'photo7.png', 'photo7.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo8.jpg')"><img src="photo8.jpg" alt="Kitchen Work 8" loading="lazy" onerror="handleImgError(this, ['photo8.jpeg', 'photo8.png', 'photo8.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo9.jpg')"><img src="photo9.jpg" alt="Kitchen Work 9" loading="lazy" onerror="handleImgError(this, ['photo9.jpeg', 'photo9.png', 'photo9.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo10.jpg')"><img src="photo10.jpg" alt="Kitchen Work 10" loading="lazy" onerror="handleImgError(this, ['photo10.jpeg', 'photo10.png', 'photo10.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo11.jpg')"><img src="photo11.jpg" alt="Kitchen Work 11" loading="lazy" onerror="handleImgError(this, ['photo11.jpeg', 'photo11.png', 'photo11.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo12.jpg')"><img src="photo12.jpg" alt="Kitchen Work 12" loading="lazy" onerror="handleImgError(this, ['photo12.jpeg', 'photo12.png', 'photo12.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo13.jpg')"><img src="photo13.jpg" alt="Kitchen Work 13" loading="lazy" onerror="handleImgError(this, ['photo13.jpeg', 'photo13.png', 'photo13.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo14.jpg')"><img src="photo14.jpg" alt="Kitchen Work 14" loading="lazy" onerror="handleImgError(this, ['photo14.jpeg', 'photo14.png', 'photo14.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo15.jpg')"><img src="photo15.jpg" alt="Kitchen Work 15" loading="lazy" onerror="handleImgError(this, ['photo15.jpeg', 'photo15.png', 'photo15.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo16.jpg')"><img src="photo16.jpg" alt="Kitchen Work 16" loading="lazy" onerror="handleImgError(this, ['photo16.jpeg', 'photo16.png', 'photo16.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo17.jpg')"><img src="photo17.jpg" alt="Kitchen Work 17" loading="lazy" onerror="handleImgError(this, ['photo17.jpeg', 'photo17.png', 'photo17.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo18.jpg')"><img src="photo18.jpg" alt="Kitchen Work 18" loading="lazy" onerror="handleImgError(this, ['photo18.jpeg', 'photo18.png', 'photo18.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo19.jpg')"><img src="photo19.jpg" alt="Kitchen Work 19" loading="lazy" onerror="handleImgError(this, ['photo19.jpeg', 'photo19.png', 'photo19.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo20.jpg')"><img src="photo20.jpg" alt="Kitchen Work 20" loading="lazy" onerror="handleImgError(this, ['photo20.jpeg', 'photo20.png', 'photo20.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo21.jpg')"><img src="photo21.jpg" alt="Kitchen Work 21" loading="lazy" onerror="handleImgError(this, ['photo21.jpeg', 'photo21.png', 'photo21.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo22.jpg')"><img src="photo22.jpg" alt="Kitchen Work 22" loading="lazy" onerror="handleImgError(this, ['photo22.jpeg', 'photo22.png', 'photo22.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo23.jpg')"><img src="photo23.jpg" alt="Kitchen Work 23" loading="lazy" onerror="handleImgError(this, ['photo23.jpeg', 'photo23.png', 'photo23.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo24.jpg')"><img src="photo24.jpg" alt="Kitchen Work 24" loading="lazy" onerror="handleImgError(this, ['photo24.jpeg', 'photo24.png', 'photo24.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo25.jpg')"><img src="photo25.jpg" alt="Kitchen Work 25" loading="lazy" onerror="handleImgError(this, ['photo25.jpeg', 'photo25.png', 'photo25.JPG'])"></div>
       </div>
     </div>
 
-    <!-- VIDEOS SECTION -->
+    <!-- VIDEOS SECTION (5 Videos) -->
     <div class="section" id="videos">
-      <div class="section-header">व्हिडिओ प्रात्यक्षिक (Videos)</div>
+      <div class="section-header">Video Showcase (5 Videos)</div>
       <div class="video-grid">
         <div class="video-card">
           <video controls preload="metadata" playsinline>
@@ -775,8 +736,56 @@
             Your browser does not support the video tag.
           </video>
           <div class="video-card-body">
-            <div class="video-card-title">१. मॉड्युलर किचन ट्रॉलीज् फिनिशिंग</div>
-            <div class="video-card-desc">सॉफ्ट क्लोज मेकॅनिझम आणि एस.एस. बास्केट्स काम.</div>
+            <div class="video-card-title">1. Modular Kitchen Trolley Installation</div>
+            <div class="video-card-desc">Soft-close telescopic slider mechanism and heavy-duty stainless steel baskets.</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video2.mp4" type="video/mp4">
+            <source src="video2.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-card-body">
+            <div class="video-card-title">2. Complete Modular Kitchen Tour</div>
+            <div class="video-card-desc">Full kitchen layout demonstration featuring acrylic cabinets and cutlery setups.</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video3.mp4" type="video/mp4">
+            <source src="video3.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-card-body">
+            <div class="video-card-title">3. Track Repair & Alignment Service</div>
+            <div class="video-card-desc">Restoring damaged trolley channels and ball bearings to factory smoothness.</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video4.mp4" type="video/mp4">
+            <source src="video4.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-card-body">
+            <div class="video-card-title">4. Modern Wardrobe & Storage Fittings</div>
+            <div class="video-card-desc">Sliding wardrobe hardware, organizers, and modern bedroom furniture craft.</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video5.mp4" type="video/mp4">
+            <source src="video5.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-card-body">
+            <div class="video-card-title">5. Custom TV Unit & Living Room Showcase</div>
+            <div class="video-card-desc">Precision wood finish, concealed wiring channels, and LED profile lighting.</div>
           </div>
         </div>
       </div>
@@ -784,35 +793,35 @@
 
     <!-- INQUIRY FORM (Direct WhatsApp Lead Generation) -->
     <div class="section" id="enquiry">
-      <div class="section-header">कोटेशन व चौकशी (WhatsApp Lead)</div>
+      <div class="section-header">Request a Quote (WhatsApp Lead)</div>
       <form onsubmit="sendWhatsAppLead(event)" class="inquiry-form">
-        <input type="text" id="leadName" placeholder="आपले नाव (Your Name)" required>
-        <input type="tel" id="leadPhone" placeholder="मोबाईल नंबर (Phone Number)" required>
-        <textarea id="leadMessage" rows="3" placeholder="आपल्या कामाचे स्वरूप (उदा. नवीन किचन ट्रॉलीज्, मेंटेनेंस किंवा फर्निचर)..." required></textarea>
+        <input type="text" id="leadName" placeholder="Your Full Name" required>
+        <input type="tel" id="leadPhone" placeholder="Mobile Number" required>
+        <textarea id="leadMessage" rows="3" placeholder="Requirement details (e.g., New Kitchen Trolleys, Repair/Maintenance, or Furniture)..." required></textarea>
         <button type="submit">
-          <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i> WhatsApp वर चौकशी पाठवा
+          <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i> Send Inquiry via WhatsApp
         </button>
       </form>
     </div>
 
     <!-- SHARE SECTION WITH HD PRINT BUTTON -->
     <div class="section" id="share" style="border-bottom: none;">
-      <div class="section-header">कार्ड शेअर करा (Share Profile)</div>
+      <div class="section-header">Share Profile</div>
       <div class="share-box">
-        <p style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">कार्ड उघडण्यासाठी स्कॅन करा:</p>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">Scan to open digital card:</p>
         <img id="qrCode" class="qr-img" src="" alt="Shree Mahalaxmi QR Code">
         
         <div style="margin: 8px 0 12px;">
           <a href="javascript:void(0)" onclick="downloadHDQR()" style="display: inline-block; background: var(--primary); color: #fff; padding: 7px 16px; border-radius: 6px; font-size: 11.5px; font-weight: 600; text-decoration: none;">
-            <i class="fa-solid fa-download"></i> प्रिंटसाठी QR डाउनलोड करा
+            <i class="fa-solid fa-download"></i> Download HD QR for Print
           </a>
         </div>
 
         <div class="share-direct-wrap">
-          <label>कोणत्याही WhatsApp नंबरवर कार्ड पाठवा:</label>
+          <label>Send card directly to any WhatsApp number:</label>
           <div class="share-input-group">
-            <input type="tel" id="targetPhone" placeholder="१० अंकी मोबाईल नंबर टाका">
-            <button onclick="sendToNumber()"><i class="fa-brands fa-whatsapp"></i> पाठवा</button>
+            <input type="tel" id="targetPhone" placeholder="Enter 10-digit mobile number">
+            <button onclick="sendToNumber()"><i class="fa-brands fa-whatsapp"></i> Send</button>
           </div>
         </div>
       </div>
@@ -820,7 +829,7 @@
 
     <!-- FOOTER -->
     <div style="text-align: center; padding: 20px; font-size: 11.5px; color: #94a3b8; background: #fafafa; border-top: 1px solid #fee2e2;">
-      © 2026 श्री महालक्ष्मी एंटरप्राईजेस. All Rights Reserved.
+      © 2026 Shree Mahalaxmi Enterprises. All Rights Reserved.
     </div>
 
   </div>
@@ -903,13 +912,13 @@
       const targetNumber = '919764204215';
 
       const formattedText = 
-`*नवीन चौकशी / लीड - श्री महालक्ष्मी एंटरप्राईजेस* 🛠️
+`*New Inquiry / Lead - Shree Mahalaxmi Enterprises* 🛠️
 -----------------------------------------
-*नाव:* ${name}
-*मोबाईल:* ${phone}
-*कामाचे स्वरूप:* ${message}
+*Name:* ${name}
+*Phone:* ${phone}
+*Requirement:* ${message}
 -----------------------------------------
-_डिजिटल बिझनेस कार्डवरून पाठवले_`;
+_Sent from Digital Business Card_`;
 
       const whatsappUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(formattedText)}`;
       window.open(whatsappUrl, '_blank');
@@ -918,7 +927,7 @@ _डिजिटल बिझनेस कार्डवरून पाठव�
     // WhatsApp Share Button
     function shareOnWhatsApp() {
       const currentUrl = window.location.href;
-      const message = `*श्री महालक्ष्मी एंटरप्राईजेस* (किचन ट्रॉलीज् ॲण्ड हार्डवेअर):\n\n${currentUrl}`;
+      const message = `*Shree Mahalaxmi Enterprises* (Kitchen Trolleys & Hardware):\n\n${currentUrl}`;
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     }
@@ -927,14 +936,14 @@ _डिजिटल बिझनेस कार्डवरून पाठव�
     function sendToNumber() {
       let phone = document.getElementById('targetPhone').value.trim().replace(/\D/g, '');
       if (!phone) {
-        alert('कृपया योग्य मोबाईल नंबर टाका');
+        alert('Please enter a valid mobile number');
         return;
       }
       if (phone.length === 10) {
         phone = '91' + phone;
       }
       const currentUrl = window.location.href;
-      const message = `नमस्कार, *श्री महालक्ष्मी एंटरप्राईजेस* (किचन ट्रॉलीज् ॲण्ड हार्डवेअर, कोल्हापूर) चे डिजिटल प्रोफाइल पाहण्यासाठी खालील लिंकवर क्लिक करा:\n\n${currentUrl}`;
+      const message = `Hello, visit the digital business card of *Shree Mahalaxmi Enterprises* (Kitchen Trolleys & Hardware, Kolhapur) here:\n\n${currentUrl}`;
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
 
@@ -964,12 +973,12 @@ _डिजिटल बिझनेस कार्डवरून पाठव�
       const vcardData = 
 `BEGIN:VCARD
 VERSION:3.0
-FN:श्री महालक्ष्मी एंटरप्राईजेस
-ORG:श्री महालक्ष्मी एंटरप्राईजेस (किचन ट्रॉलीज् ॲण्ड हार्डवेअर)
-TITLE:किचन ट्रॉलीज्, मेंटेनेंस व फर्निचर वर्क
+FN:Shree Mahalaxmi Enterprises
+ORG:Shree Mahalaxmi Enterprises (Kitchen Trolleys & Hardware)
+TITLE:Kitchen Trolleys, Maintenance & Furniture Work
 TEL;TYPE=CELL,VOICE:+919764204215
 TEL;TYPE=CELL,VOICE:+918949284215
-ADR;TYPE=WORK:;;प्लॉट नं. १०, राजाराम चौक, टिंबर मार्केट;कोल्हापूर;महाराष्ट्र;;भारत
+ADR;TYPE=WORK:;;Plot No. 10, Rajaram Chowk, Timber Market;Kolhapur;Maharashtra;;India
 URL:https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw
 END:VCARD`;
 
