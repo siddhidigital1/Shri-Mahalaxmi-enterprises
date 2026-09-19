@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>श्री महालक्ष्मी एंटरप्राईजेस - किचन ट्रॉलीज् ॲण्ड हार्डवेअर</title>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Inter & Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #b91c1c;       /* Premium Kitchen Red */
+      --secondary: #991b1b;
+      --accent: #d97706;        /* Warm Wood/Gold accent */
+      --navy: #0f172a;          /* Logo navy background tone */
+      --surface: #ffffff;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --muted: #64748b;
+      --line: #fee2e2;
+      --whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 10px 6px 80px;
+    }
+
+    .card-shell {
+      width: 100%;
+      max-width: 440px;
+      background: var(--surface);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* Hero / Profile Section */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #b91c1c 100%);
+      color: #fff;
+      text-align: center;
+      padding: 26px 20px 24px;
+      position: relative;
+    }
+    .views-counter {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 10px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+    .avatar-wrap {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 4px solid #ffffff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+    }
+    .hero h1 {
+      font-size: 20.5px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      line-height: 1.3;
+    }
+    .hero .role {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #fef08a;
+      margin-top: 5px;
+      letter-spacing: 0.3px;
+    }
+    .hero .sub-role {
+      font-size: 12px;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    /* Quick Action Row */
+    .quick-bar {
+      display: flex;
+      justify-content: space-around;
+      padding: 14px 20px;
+      background: #ffffff;
+      border-bottom: 8px solid var(--line);
+    }
+    .quick-btn {
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .quick-btn .icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+    .quick-btn:hover .icon-circle {
+      transform: scale(1.05);
+    }
+    .btn-call { background: var(--primary); }
+    .btn-wa   { background: var(--whatsapp); }
+    .btn-dir  { background: #b45309; }
+
+    /* Section Styling */
+    .section {
+      padding: 20px 18px;
+      border-bottom: 8px solid var(--line);
+    }
+    .section-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #fee2e2;
+    }
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    /* Contact Details */
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .info-row i {
+      color: var(--primary);
+      width: 18px;
+      text-align: center;
+      margin-top: 2px;
+      font-size: 15px;
+    }
+
+    /* Action Buttons Row */
+    .vcard-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .vcard-action {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: var(--primary);
+      cursor: pointer;
+      border: none;
+    }
+    .vcard-action.btn-wa-share {
+      background: var(--whatsapp);
+    }
+
+    /* Direct Links Tile */
+    .link-tile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #fed7aa;
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s;
+      margin-bottom: 10px;
+    }
+    .link-tile:hover {
+      background: #fff7ed;
+    }
+    .link-tile-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .link-tile-left i {
+      font-size: 22px;
+    }
+    .link-tile-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .link-tile-desc {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Specialties Pill Grid */
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .pill {
+      background: #fef2f2;
+      color: var(--primary);
+      border: 1px solid #fecaca;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Service Cards */
+    .product-card {
+      border: 1px solid #fee2e2;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .product-body {
+      padding: 14px;
+    }
+    .product-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .product-banner-svg {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 12px;
+      box-shadow: 0 3px 10px rgba(185, 28, 28, 0.12);
+    }
+    .enquiry-btn {
+      display: inline-block;
+      background: var(--whatsapp);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+
+    /* Photo Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #fee2e2;
+      background: #fef2f2;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Video Showcase Grid */
+    .video-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .video-card {
+      border: 1px solid #fee2e2;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .video-card video {
+      width: 100%;
+      display: block;
+      background: #000;
+      border-bottom: 1px solid #fee2e2;
+    }
+    .video-card-body {
+      padding: 10px 12px;
+    }
+    .video-card-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .video-card-desc {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.92);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .lightbox-content {
+      max-width: 92%;
+      max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #ffffff;
+      font-size: 34px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Lead Form */
+    .inquiry-form input,
+    .inquiry-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      outline: none;
+    }
+    .inquiry-form input:focus,
+    .inquiry-form textarea:focus {
+      border-color: var(--primary);
+    }
+    .inquiry-form button {
+      width: 100%;
+      background: var(--whatsapp);
+      color: #fff;
+      border: none;
+      padding: 11px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .inquiry-form button:hover {
+      background: #1ebc59;
+    }
+
+    /* Share Section */
+    .share-box {
+      border: 1px dashed #f87171;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      background: #fef2f2;
+    }
+    .qr-img {
+      width: 140px;
+      height: 140px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #fecaca;
+      padding: 4px;
+      background: #fff;
+    }
+    .share-direct-wrap {
+      margin-top: 16px;
+      text-align: left;
+    }
+    .share-direct-wrap label {
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .share-input-group {
+      display: flex;
+      gap: 6px;
+    }
+    .share-input-group input {
+      flex: 1;
+      padding: 8px 10px;
+      font-size: 12.5px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+    }
+    .share-input-group button {
+      background: var(--whatsapp);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Bottom Floating Navigation */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0 10px;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.08);
+      z-index: 999;
+      border-top: 1px solid #fee2e2;
+    }
+    .bottom-tab {
+      text-decoration: none;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      font-size: 9.5px;
+      font-weight: 600;
+    }
+    .bottom-tab i {
+      font-size: 16px;
+    }
+    .bottom-tab:hover, .bottom-tab.active {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-shell">
+
+    <!-- HOME / PROFILE SECTION -->
+    <div class="hero" id="home">
+      <div class="views-counter"><i class="fa-solid fa-eye"></i> Views: <b>1,420</b></div>
+      <div class="avatar-wrap">
+        <img src="logo.png" alt="श्री महालक्ष्मी एंटरप्राईजेस लोगो" onerror="handleImgError(this, ['logo.jpeg', 'logo.jpg', 'Logo.png'])">
+      </div>
+      <h1>श्री महालक्ष्मी एंटरप्राईजेस</h1>
+      <div class="role">किचन ट्रॉलीज् ॲण्ड हार्डवेअर</div>
+      <div class="sub-role">एस.एस. किचन ट्रॉलीज् | मॉड्युलर किचन | फर्निचर वर्क</div>
+    </div>
+
+    <!-- QUICK CALL/WHATSAPP/LOCATION BAR -->
+    <div class="quick-bar">
+      <a href="tel:+919764204215" class="quick-btn">
+        <div class="icon-circle btn-call"><i class="fa-solid fa-phone"></i></div>
+        Call
+      </a>
+      <a href="https://wa.me/919764204215?text=नमस्कार,%20मी%20आपले%20डिजिटल%20कार्ड%20पाहिले.%20मला%20किचन%20ट्रॉलीज्%20आणि%20फर्निचरच्या%20कामाबद्दल%20माहिती%20हवी%20आहे." target="_blank" class="quick-btn">
+        <div class="icon-circle btn-wa"><i class="fa-brands fa-whatsapp"></i></div>
+        WhatsApp
+      </a>
+      <a href="https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw" target="_blank" class="quick-btn">
+        <div class="icon-circle btn-dir"><i class="fa-solid fa-location-dot"></i></div>
+        Direction
+      </a>
+    </div>
+
+    <!-- CONTACT DETAILS & ACTIONS -->
+    <div class="section">
+      <div class="info-list">
+        <a href="https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw" target="_blank" class="info-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>प्लॉट नं. १०, राजाराम चौक, टिंबर मार्केट, कोल्हापूर.</span>
+        </a>
+        <a href="tel:+919764204215" class="info-row">
+          <i class="fa-solid fa-phone"></i>
+          <span>रोहन सुतार : +91 9764204215</span>
+        </a>
+        <a href="tel:+918949284215" class="info-row">
+          <i class="fa-solid fa-phone"></i>
+          <span>सुशांत सुतार : +91 8949284215</span>
+        </a>
+        <div class="info-row">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <span>किचन ट्रॉलीज् मेंटेनेंस व न्यू इन्स्टॉलेशन सुविधा</span>
+        </div>
+      </div>
+
+      <div class="vcard-row">
+        <a href="javascript:void(0)" onclick="downloadVCard()" class="vcard-action">
+          <i class="fa-solid fa-address-book"></i> Add to Contacts
+        </a>
+        <a href="javascript:void(0)" onclick="shareOnWhatsApp()" class="vcard-action btn-wa-share">
+          <i class="fa-brands fa-whatsapp"></i> Share Card
+        </a>
+      </div>
+    </div>
+
+    <!-- DIRECT LINKS SECTION -->
+    <div class="section" id="links">
+      <div class="section-header">Quick Links & Navigation</div>
+      
+      <a href="https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw" target="_blank" class="link-tile">
+        <div class="link-tile-left">
+          <i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i>
+          <div>
+            <div class="link-tile-title">Google Maps वर दुकान शोधा</div>
+            <div class="link-tile-desc">टिंबर मार्केट, राजाराम चौक, कोल्हापूर</div>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:var(--primary); font-size: 13px;"></i>
+      </a>
+
+      <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20किचन%20साइट%20व्हिजिट%20व%20कोटेशनसाठी%20चौकशी%20करायची%20आहे." target="_blank" class="link-tile">
+        <div class="link-tile-left">
+          <i class="fa-brands fa-whatsapp" style="color: var(--whatsapp);"></i>
+          <div>
+            <div class="link-tile-title">WhatsApp वर कोटेशन मिळवा</div>
+            <div class="link-tile-desc">किचन ट्रॉलीज् व फर्निचर एस्टिमेट</div>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:var(--primary); font-size: 13px;"></i>
+      </a>
+    </div>
+
+    <!-- ABOUT US SECTION -->
+    <div class="section" id="about">
+      <div class="section-header">आमच्याबद्दल (About Us)</div>
+      <p style="font-size: 13px; color: #475569; line-height: 1.6;">
+        <strong>श्री महालक्ष्मी एंटरप्राईजेस</strong> मध्ये आपले सहर्ष स्वागत आहे! आम्ही दर्जेदार व मजबूत <strong>एस.एस. (Stainless Steel) किचन ट्रॉलीज्, मॉड्युलर किचन, आधुनिक हार्डवेअर आणि सर्व प्रकारचे फर्निचर वर्क</strong> ग्राहकांच्या आवडीनुसार व योग्य दरात करून देतो. तसेच जुन्या किचन ट्रॉलीज् मेंटेनेंस व दुरुस्तीची खास सुविधा उपलब्ध आहे.
+      </p>
+
+      <div class="section-header" style="margin-top: 18px; font-size: 13.5px; border-bottom: none; padding-bottom: 0;">आमच्या सेवा (Our Specialities)</div>
+      <div class="pill-grid">
+        <div class="pill">✨ एस.एस. किचन ट्रॉलीज्</div>
+        <div class="pill">🍳 मॉड्युलर किचन ट्रॉलीज्</div>
+        <div class="pill">🔧 किचन ट्रॉलीज् मेंटेनेंस सुविधा</div>
+        <div class="pill">🪑 फर्निचर वर्क</div>
+        <div class="pill">🔩 किचन ॲण्ड होम हार्डवेअर</div>
+      </div>
+    </div>
+
+    <!-- SERVICES / PRODUCTS SECTION -->
+    <div class="section" id="services">
+      <div class="section-header">आमची उत्पादने व सेवा (Services)</div>
+
+      <!-- Service 1: Modular Kitchen -->
+      <div class="product-card">
+        <div class="product-body">
+          <div class="product-title">✨ मॉड्युलर किचन व एस.एस. ट्रॉलीज्</div>
+          <div class="product-desc">प्रिमियम क्वालिटी स्टेनलेस स्टील ट्रॉलीज्, बास्केट्स, आणि आधुनिक डिझाइनसह मॉड्युलर किचन सेटअप. टिकाऊ आणि गंज-प्रतिरोधक काम.</div>
+          
+          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="kitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0f172a" />
+                <stop offset="50%" stop-color="#1e293b" />
+                <stop offset="100%" stop-color="#991b1b" />
+              </linearGradient>
+              <linearGradient id="goldK1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fef08a" />
+                <stop offset="50%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#d97706" />
+              </linearGradient>
+            </defs>
+            <rect width="500" height="240" rx="14" fill="url(#kitGrad1)" />
+            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
+            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
+            
+            <g transform="translate(45, 65)" stroke="url(#goldK1)" stroke-width="2" fill="none">
+              <rect x="0" y="10" width="70" height="70" rx="4"/>
+              <line x1="0" y1="35" x2="70" y2="35"/>
+              <line x1="0" y1="60" x2="70" y2="60"/>
+              <line x1="25" y1="22" x2="45" y2="22" stroke-width="3"/>
+              <line x1="25" y1="47" x2="45" y2="47" stroke-width="3"/>
+              <line x1="25" y1="72" x2="45" y2="72" stroke-width="3"/>
+            </g>
+
+            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">SHREE MAHALAXMI</text>
+            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">MODULAR KITCHEN TROLLEYS</text>
+            <text x="140" y="142" fill="#fecaca" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">S.S. Baskets • Soft Close • Custom Designs</text>
+            
+            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
+            <text x="222" y="177" fill="#0f172a" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">BEST QUALITY WORK</text>
+          </svg>
+          
+          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20एस.एस.%20किचन%20ट्रॉलीज्%20कामाबद्दल%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर चौकशी करा</a>
+        </div>
+      </div>
+
+      <!-- Service 2: Maintenance & Repair -->
+      <div class="product-card">
+        <div class="product-body">
+          <div class="product-title">🔧 किचन ट्रॉलीज् मेंटेनेंस व रिपेअरिंग</div>
+          <div class="product-desc">जुन्या किचन ट्रॉलीज् चॅनल बदलणे, री-अलाइनमेंट, बास्केट दुरुस्ती आणि जलद व खात्रीशीर मेंटेनेंस सर्व्हिस.</div>
+          
+          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="kitGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#450a0a" />
+                <stop offset="50%" stop-color="#7f1d1d" />
+                <stop offset="100%" stop-color="#b91c1c" />
+              </linearGradient>
+            </defs>
+            <rect width="500" height="240" rx="14" fill="url(#kitGrad2)" />
+            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
+            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
+            
+            <g transform="translate(50, 70)" stroke="url(#goldK1)" stroke-width="2.5" fill="none" stroke-linecap="round">
+              <path d="M10 50 L45 15"/>
+              <path d="M40 10 L50 20"/>
+              <circle cx="20" cy="40" r="10"/>
+              <path d="M25 55 L55 25"/>
+            </g>
+
+            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">FAST SERVICE</text>
+            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">TROLLEY MAINTENANCE</text>
+            <text x="140" y="142" fill="#fecaca" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">Channel Repair • Replacement • Servicing</text>
+            
+            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
+            <text x="222" y="177" fill="#450a0a" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">QUICK RESOLUTION</text>
+          </svg>
+          
+          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20किचन%20ट्रॉलीज्%20दुरुस्ती%20व%20मेंटेनेंसबद्दल%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर संपर्क करा</a>
+        </div>
+      </div>
+
+      <!-- Service 3: Furniture Work -->
+      <div class="product-card">
+        <div class="product-body">
+          <div class="product-title">🪑 सर्व प्रकारचे फर्निचर वर्क</div>
+          <div class="product-desc">घरासाठी व ऑफिससाठी लागणारे वॉर्डरोब, टीव्ही युनिट, बेड, कपाट, कॅबिनेट व संपूर्ण इंटेरियर फर्निचर काम खात्रीशीरपणे करून दिले जाते.</div>
+          
+          <svg class="product-banner-svg" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="kitGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1e1b4b" />
+                <stop offset="50%" stop-color="#312e81" />
+                <stop offset="100%" stop-color="#b45309" />
+              </linearGradient>
+            </defs>
+            <rect width="500" height="240" rx="14" fill="url(#kitGrad3)" />
+            <rect x="12" y="12" width="476" height="216" rx="10" fill="none" stroke="url(#goldK1)" stroke-width="2" stroke-dasharray="6,4" opacity="0.75" />
+            <rect x="22" y="22" width="456" height="196" rx="8" fill="rgba(0,0,0,0.25)" stroke="url(#goldK1)" stroke-width="1" />
+            
+            <g transform="translate(48, 65)" stroke="url(#goldK1)" stroke-width="2.5" fill="none">
+              <rect x="5" y="15" width="60" height="60" rx="3"/>
+              <line x1="35" y1="15" x2="35" y2="75"/>
+              <circle cx="28" cy="45" r="2" fill="url(#goldK1)"/>
+              <circle cx="42" cy="45" r="2" fill="url(#goldK1)"/>
+            </g>
+
+            <text x="140" y="80" fill="#fef08a" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" letter-spacing="2">CUSTOM INTERIOR</text>
+            <text x="140" y="115" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="18" font-weight="700">HOME & OFFICE FURNITURE</text>
+            <text x="140" y="142" fill="#fef3c7" font-family="'Poppins', sans-serif" font-size="12" opacity="0.9">Wardrobe • TV Unit • Bed • Cabinets</text>
+            
+            <rect x="140" y="160" width="165" height="25" rx="12" fill="url(#goldK1)" />
+            <text x="222" y="177" fill="#1e1b4b" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">MODERN FINISH</text>
+          </svg>
+          
+          <a href="https://wa.me/919764204215?text=नमस्कार,%20मला%20फर्निचरच्या%20कामाबाबत%20चौकशी%20करायची%20आहे." target="_blank" class="enquiry-btn">WhatsApp वर बोला</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTOS GALLERY SECTION -->
+    <div class="section" id="gallery">
+      <div class="section-header">कामाचे फोटो (Photo Gallery)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('photo1.jpg')"><img src="photo1.jpg" alt="Kitchen Work 1" loading="lazy" onerror="handleImgError(this, ['photo1.jpeg', 'photo1.png', 'photo1.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo2.jpg')"><img src="photo2.jpg" alt="Kitchen Work 2" loading="lazy" onerror="handleImgError(this, ['photo2.jpeg', 'photo2.png', 'photo2.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo3.jpg')"><img src="photo3.jpg" alt="Kitchen Work 3" loading="lazy" onerror="handleImgError(this, ['photo3.jpeg', 'photo3.png', 'photo3.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo4.jpg')"><img src="photo4.jpg" alt="Kitchen Work 4" loading="lazy" onerror="handleImgError(this, ['photo4.jpeg', 'photo4.png', 'photo4.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo5.jpg')"><img src="photo5.jpg" alt="Kitchen Work 5" loading="lazy" onerror="handleImgError(this, ['photo5.jpeg', 'photo5.png', 'photo5.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo6.jpg')"><img src="photo6.jpg" alt="Kitchen Work 6" loading="lazy" onerror="handleImgError(this, ['photo6.jpeg', 'photo6.png', 'photo6.JPG'])"></div>
+      </div>
+    </div>
+
+    <!-- VIDEOS SECTION -->
+    <div class="section" id="videos">
+      <div class="section-header">व्हिडिओ प्रात्यक्षिक (Videos)</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video1.mp4" type="video/mp4">
+            <source src="video1.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-card-body">
+            <div class="video-card-title">१. मॉड्युलर किचन ट्रॉलीज् फिनिशिंग</div>
+            <div class="video-card-desc">सॉफ्ट क्लोज मेकॅनिझम आणि एस.एस. बास्केट्स काम.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INQUIRY FORM (Direct WhatsApp Lead Generation) -->
+    <div class="section" id="enquiry">
+      <div class="section-header">कोटेशन व चौकशी (WhatsApp Lead)</div>
+      <form onsubmit="sendWhatsAppLead(event)" class="inquiry-form">
+        <input type="text" id="leadName" placeholder="आपले नाव (Your Name)" required>
+        <input type="tel" id="leadPhone" placeholder="मोबाईल नंबर (Phone Number)" required>
+        <textarea id="leadMessage" rows="3" placeholder="आपल्या कामाचे स्वरूप (उदा. नवीन किचन ट्रॉलीज्, मेंटेनेंस किंवा फर्निचर)..." required></textarea>
+        <button type="submit">
+          <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i> WhatsApp वर चौकशी पाठवा
+        </button>
+      </form>
+    </div>
+
+    <!-- SHARE SECTION WITH HD PRINT BUTTON -->
+    <div class="section" id="share" style="border-bottom: none;">
+      <div class="section-header">कार्ड शेअर करा (Share Profile)</div>
+      <div class="share-box">
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">कार्ड उघडण्यासाठी स्कॅन करा:</p>
+        <img id="qrCode" class="qr-img" src="" alt="Shree Mahalaxmi QR Code">
+        
+        <div style="margin: 8px 0 12px;">
+          <a href="javascript:void(0)" onclick="downloadHDQR()" style="display: inline-block; background: var(--primary); color: #fff; padding: 7px 16px; border-radius: 6px; font-size: 11.5px; font-weight: 600; text-decoration: none;">
+            <i class="fa-solid fa-download"></i> प्रिंटसाठी QR डाउनलोड करा
+          </a>
+        </div>
+
+        <div class="share-direct-wrap">
+          <label>कोणत्याही WhatsApp नंबरवर कार्ड पाठवा:</label>
+          <div class="share-input-group">
+            <input type="tel" id="targetPhone" placeholder="१० अंकी मोबाईल नंबर टाका">
+            <button onclick="sendToNumber()"><i class="fa-brands fa-whatsapp"></i> पाठवा</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div style="text-align: center; padding: 20px; font-size: 11.5px; color: #94a3b8; background: #fafafa; border-top: 1px solid #fee2e2;">
+      © 2026 श्री महालक्ष्मी एंटरप्राईजेस. All Rights Reserved.
+    </div>
+
+  </div>
+
+  <!-- FLOATING BOTTOM NAVIGATION -->
+  <nav class="bottom-bar">
+    <a href="#home" class="bottom-tab active">
+      <i class="fa-solid fa-house"></i>
+      <span>HOME</span>
+    </a>
+    <a href="#about" class="bottom-tab">
+      <i class="fa-solid fa-circle-info"></i>
+      <span>ABOUT</span>
+    </a>
+    <a href="#services" class="bottom-tab">
+      <i class="fa-solid fa-kitchen-set"></i>
+      <span>SERVICES</span>
+    </a>
+    <a href="#gallery" class="bottom-tab">
+      <i class="fa-solid fa-images"></i>
+      <span>GALLERY</span>
+    </a>
+    <a href="#enquiry" class="bottom-tab">
+      <i class="fa-solid fa-envelope"></i>
+      <span>ENQUIRY</span>
+    </a>
+    <a href="#share" class="bottom-tab">
+      <i class="fa-solid fa-share-nodes"></i>
+      <span>SHARE</span>
+    </a>
+  </nav>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" src="" alt="Enlarged View" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    // Fallback loader for images
+    function handleImgError(img, fallbacks) {
+      if (!img.dataset.tryIndex) {
+        img.dataset.tryIndex = "0";
+      }
+      let idx = parseInt(img.dataset.tryIndex);
+      if (idx < fallbacks.length) {
+        img.dataset.tryIndex = (idx + 1).toString();
+        img.src = fallbacks[idx];
+      } else {
+        img.onerror = null;
+      }
+    }
+
+    // Set dynamic QR code to current live URL
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentUrl = window.location.href;
+      document.getElementById("qrCode").src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(currentUrl)}`;
+    });
+
+    // Lightbox Controls
+    function openLightbox(imageSrc) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = imageSrc;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // WhatsApp Direct Lead Generation Handler
+    function sendWhatsAppLead(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+      const message = document.getElementById('leadMessage').value.trim();
+
+      const targetNumber = '919764204215';
+
+      const formattedText = 
+`*नवीन चौकशी / लीड - श्री महालक्ष्मी एंटरप्राईजेस* 🛠️
+-----------------------------------------
+*नाव:* ${name}
+*मोबाईल:* ${phone}
+*कामाचे स्वरूप:* ${message}
+-----------------------------------------
+_डिजिटल बिझनेस कार्डवरून पाठवले_`;
+
+      const whatsappUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(formattedText)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // WhatsApp Share Button
+    function shareOnWhatsApp() {
+      const currentUrl = window.location.href;
+      const message = `*श्री महालक्ष्मी एंटरप्राईजेस* (किचन ट्रॉलीज् ॲण्ड हार्डवेअर):\n\n${currentUrl}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Direct Share to 10-Digit Number
+    function sendToNumber() {
+      let phone = document.getElementById('targetPhone').value.trim().replace(/\D/g, '');
+      if (!phone) {
+        alert('कृपया योग्य मोबाईल नंबर टाका');
+        return;
+      }
+      if (phone.length === 10) {
+        phone = '91' + phone;
+      }
+      const currentUrl = window.location.href;
+      const message = `नमस्कार, *श्री महालक्ष्मी एंटरप्राईजेस* (किचन ट्रॉलीज् ॲण्ड हार्डवेअर, कोल्हापूर) चे डिजिटल प्रोफाइल पाहण्यासाठी खालील लिंकवर क्लिक करा:\n\n${currentUrl}`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Download High-Resolution QR (1000x1000 px) for printing
+    function downloadHDQR() {
+      const currentUrl = window.location.href;
+      const hdQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${encodeURIComponent(currentUrl)}`;
+      
+      fetch(hdQrUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const blobUrl = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = blobUrl;
+          link.download = 'Shree_Mahalaxmi_Enterprises_QR.png';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+        .catch(() => {
+          window.open(hdQrUrl, '_blank');
+        });
+    }
+
+    // Native vCard Contact File Generator
+    function downloadVCard() {
+      const vcardData = 
+`BEGIN:VCARD
+VERSION:3.0
+FN:श्री महालक्ष्मी एंटरप्राईजेस
+ORG:श्री महालक्ष्मी एंटरप्राईजेस (किचन ट्रॉलीज् ॲण्ड हार्डवेअर)
+TITLE:किचन ट्रॉलीज्, मेंटेनेंस व फर्निचर वर्क
+TEL;TYPE=CELL,VOICE:+919764204215
+TEL;TYPE=CELL,VOICE:+918949284215
+ADR;TYPE=WORK:;;प्लॉट नं. १०, राजाराम चौक, टिंबर मार्केट;कोल्हापूर;महाराष्ट्र;;भारत
+URL:https://maps.app.goo.gl/P6QaMSG4rduBo6fc7?g_st=aw
+END:VCARD`;
+
+      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Shree_Mahalaxmi_Enterprises.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+</body>
+</html>
