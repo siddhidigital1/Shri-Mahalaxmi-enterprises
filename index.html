@@ -72,7 +72,7 @@
       height: 112px;
       margin: 0 auto 12px;
       border-radius: 50%;
-      background: #ffffff;
+      background: #000000;
       border: 4px solid #ffffff;
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
       overflow: hidden;
@@ -83,8 +83,10 @@
     .avatar-wrap img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      padding: 4px;
+      object-fit: cover;
+      display: block;
+      padding: 0;
+      border-radius: 50%;
     }
     .hero h1 {
       font-size: 20.5px;
@@ -767,7 +769,7 @@
         <div class="gallery-item" onclick="openLightbox('photo2.jpg')"><img src="photo2.jpg" alt="Kitchen Work 2" loading="lazy" onerror="handleImgError(this, ['photo2.jpeg', 'photo2.png', 'photo2.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo3.jpg')"><img src="photo3.jpg" alt="Kitchen Work 3" loading="lazy" onerror="handleImgError(this, ['photo3.jpeg', 'photo3.png', 'photo3.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo4.jpg')"><img src="photo4.jpg" alt="Kitchen Work 4" loading="lazy" onerror="handleImgError(this, ['photo4.jpeg', 'photo4.png', 'photo4.JPG'])"></div>
-        <div class="gallery-item" onclick="openLightbox('photo5.jpg')"><img src="photo5.jpg" alt="Kitchen Work 5" loading="lazy" onerror="handleImgError(this, ['photo5.jpeg', 'photo5.png', 'photo5.JPG'])"></div>
+        <div class="gallery-item" onclick="openLightbox('photo5.jpg')"><img src="photo5.jpg" alt="Kitchen Work 5" loading="lazy" onerror="handleImgError(this, ['photo5.jpeg', 'photo5.png', 'photo5.jpg'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo6.jpg')"><img src="photo6.jpg" alt="Kitchen Work 6" loading="lazy" onerror="handleImgError(this, ['photo6.jpeg', 'photo6.png', 'photo6.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo7.jpg')"><img src="photo7.jpg" alt="Kitchen Work 7" loading="lazy" onerror="handleImgError(this, ['photo7.jpeg', 'photo7.png', 'photo7.JPG'])"></div>
         <div class="gallery-item" onclick="openLightbox('photo8.jpg')"><img src="photo8.jpg" alt="Kitchen Work 8" loading="lazy" onerror="handleImgError(this, ['photo8.jpeg', 'photo8.png', 'photo8.JPG'])"></div>
