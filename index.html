@@ -422,16 +422,18 @@
       font-weight: bold;
     }
 
-    /* Lead Form */
+    /* Forms Common Styling */
     .inquiry-form input,
     .inquiry-form textarea {
       width: 100%;
-      padding: 10px 12px;
+      padding: 11px 13px;
       font-size: 13px;
       border: 1px solid #cbd5e1;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       outline: none;
+      background: #fff;
+      transition: border-color 0.2s;
     }
     .inquiry-form input:focus,
     .inquiry-form textarea:focus {
@@ -442,7 +444,7 @@
       background: var(--whatsapp);
       color: #fff;
       border: none;
-      padding: 11px;
+      padding: 12px;
       border-radius: 8px;
       font-weight: 600;
       font-size: 13px;
@@ -455,6 +457,70 @@
     }
     .inquiry-form button:hover {
       background: #1ebc59;
+    }
+
+    /* Feedback Component Styling */
+    .feedback-container {
+      background: #eafaf1;
+      border-radius: 12px;
+      padding: 18px 16px;
+      border: 1px solid #d1fae5;
+    }
+    .feedback-subtitle {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+    }
+    .rating-wrapper {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      user-select: none;
+    }
+    .stars-group {
+      display: flex;
+      gap: 5px;
+    }
+    .star-item {
+      font-size: 23px;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: color 0.15s ease, transform 0.1s;
+    }
+    .star-item.active,
+    .star-item.hovered {
+      color: #f59e0b;
+    }
+    .rating-badge {
+      background: #1e293b;
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .btn-feedback-submit {
+      width: 100%;
+      background: #22c55e !important;
+      color: #ffffff !important;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-feedback-submit:hover {
+      background: #16a34a !important;
     }
 
     /* Share Section */
@@ -653,7 +719,7 @@
     <div class="section" id="services">
       <div class="section-header">Our Products & Services</div>
 
-      <!-- Service 1: Modular Kitchen & S.S. Trolleys (Exact Kitchen Trolley Drawers Image) -->
+      <!-- Service 1: Modular Kitchen & S.S. Trolleys -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=800&q=80" alt="Modular Kitchen Trolleys and Cabinets">
@@ -666,7 +732,7 @@
         </div>
       </div>
 
-      <!-- Service 2: Maintenance & Repair (Accurate Tools & Hardware Repair Image) -->
+      <!-- Service 2: Maintenance & Repair -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=800&q=80" alt="Kitchen Trolley Maintenance & Hardware Repair Tools">
@@ -679,7 +745,7 @@
         </div>
       </div>
 
-      <!-- Service 3: Furniture Work (Custom Interior & Wardrobe Furniture Image) -->
+      <!-- Service 3: Furniture Work -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Custom Furniture and Interior Woodwork">
@@ -791,17 +857,42 @@
       </div>
     </div>
 
-    <!-- INQUIRY FORM (Direct WhatsApp Lead Generation) -->
+    <!-- ENQUIRY FORM SECTION -->
     <div class="section" id="enquiry">
-      <div class="section-header">Request a Quote (WhatsApp Lead)</div>
+      <div class="section-header">Enquiry Form</div>
       <form onsubmit="sendWhatsAppLead(event)" class="inquiry-form">
-        <input type="text" id="leadName" placeholder="Your Full Name" required>
-        <input type="tel" id="leadPhone" placeholder="Mobile Number" required>
-        <textarea id="leadMessage" rows="3" placeholder="Requirement details (e.g., New Kitchen Trolleys, Repair/Maintenance, or Furniture)..." required></textarea>
+        <input type="text" id="leadName" placeholder="Enter Full Name" required>
+        <input type="tel" id="leadPhone" placeholder="Enter Mobile Number" required>
+        <textarea id="leadMessage" rows="3" placeholder="Enter your inquiry details (e.g., Modular Kitchen, Trolley Maintenance, Furniture)..." required></textarea>
         <button type="submit">
-          <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i> Send Inquiry via WhatsApp
+          <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i> Submit Enquiry via WhatsApp
         </button>
       </form>
+    </div>
+
+    <!-- FEEDBACK SECTION -->
+    <div class="section" id="feedback">
+      <div class="section-header">FEEDBACK</div>
+      <div class="feedback-container">
+        <div class="feedback-subtitle">Give Feedback</div>
+        <form onsubmit="sendFeedback(event)" class="inquiry-form">
+          <div class="rating-wrapper">
+            <div class="stars-group" id="starsGroup">
+              <i class="fa-solid fa-star star-item" data-value="1" onclick="selectRating(1)" onmouseover="hoverRating(1)" onmouseout="resetHover()"></i>
+              <i class="fa-solid fa-star star-item" data-value="2" onclick="selectRating(2)" onmouseover="hoverRating(2)" onmouseout="resetHover()"></i>
+              <i class="fa-solid fa-star star-item" data-value="3" onclick="selectRating(3)" onmouseover="hoverRating(3)" onmouseout="resetHover()"></i>
+              <i class="fa-solid fa-star star-item" data-value="4" onclick="selectRating(4)" onmouseover="hoverRating(4)" onmouseout="resetHover()"></i>
+              <i class="fa-solid fa-star star-item" data-value="5" onclick="selectRating(5)" onmouseover="hoverRating(5)" onmouseout="resetHover()"></i>
+            </div>
+            <div class="rating-badge" id="ratingBadgeText">Select a Rating</div>
+          </div>
+
+          <input type="text" id="feedbackName" placeholder="Enter Full Name" required>
+          <textarea id="feedbackText" rows="3" placeholder="Enter your feedback" required></textarea>
+          
+          <button type="submit" class="btn-feedback-submit">Give Feedback</button>
+        </form>
+      </div>
     </div>
 
     <!-- SHARE SECTION WITH HD PRINT BUTTON -->
@@ -856,9 +947,9 @@
       <i class="fa-solid fa-envelope"></i>
       <span>ENQUIRY</span>
     </a>
-    <a href="#share" class="bottom-tab">
-      <i class="fa-solid fa-share-nodes"></i>
-      <span>SHARE</span>
+    <a href="#feedback" class="bottom-tab">
+      <i class="fa-solid fa-star"></i>
+      <span>FEEDBACK</span>
     </a>
   </nav>
 
@@ -901,35 +992,97 @@
       document.getElementById('lightbox').style.display = 'none';
     }
 
-    // WhatsApp Direct Lead Generation Handler
-    function sendWhatsAppLead(event) {
+    // Star Rating Logic
+    let currentRating = 0;
+    const ratingTexts = {
+      1: "1 / 5 Poor",
+      2: "2 / 5 Fair",
+      3: "3 / 5 Good",
+      4: "4 / 5 Very Good",
+      5: "5 / 5 Excellent"
+    };
+
+    function selectRating(stars) {
+      currentRating = stars;
+      renderStars(stars);
+      document.getElementById('ratingBadgeText').innerText = ratingTexts[stars];
+    }
+
+    function hoverRating(stars) {
+      renderStars(stars);
+      document.getElementById('ratingBadgeText').innerText = ratingTexts[stars];
+    }
+
+    function resetHover() {
+      renderStars(currentRating);
+      if (currentRating > 0) {
+        document.getElementById('ratingBadgeText').innerText = ratingTexts[currentRating];
+      } else {
+        document.getElementById('ratingBadgeText').innerText = "Select a Rating";
+      }
+    }
+
+    function renderStars(count) {
+      const stars = document.querySelectorAll('.star-item');
+      stars.forEach(star => {
+        const val = parseInt(star.getAttribute('data-value'));
+        if (val <= count) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    // Feedback Submission via WhatsApp
+    function sendFeedback(event) {
       event.preventDefault();
-
-      const name = document.getElementById('leadName').value.trim();
-      const phone = document.getElementById('leadPhone').value.trim();
-      const message = document.getElementById('leadMessage').value.trim();
-
+      if (currentRating === 0) {
+        alert("Please select a star rating first!");
+        return;
+      }
+      const name = document.getElementById('feedbackName').value.trim();
+      const feedback = document.getElementById('feedbackText').value.trim();
+      const starsDisplay = "⭐".repeat(currentRating);
       const targetNumber = '919764204215';
 
       const formattedText = 
-`*New Inquiry / Lead - Shree Mahalaxmi Enterprises* 🛠️
+`*Customer Feedback - Shree Mahalaxmi Enterprises* ⭐
+-----------------------------------------
+*Rating:* ${starsDisplay} (${currentRating}/5)
+*Client Name:* ${name}
+*Feedback:* ${feedback}
+-----------------------------------------
+_Sent from Digital Profile Feedback Form_`;
+
+      window.open(`https://wa.me/${targetNumber}?text=${encodeURIComponent(formattedText)}`, '_blank');
+    }
+
+    // Enquiry Form WhatsApp Handler
+    function sendWhatsAppLead(event) {
+      event.preventDefault();
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+      const message = document.getElementById('leadMessage').value.trim();
+      const targetNumber = '919764204215';
+
+      const formattedText = 
+`*New Enquiry - Shree Mahalaxmi Enterprises* 🛠️
 -----------------------------------------
 *Name:* ${name}
 *Phone:* ${phone}
-*Requirement:* ${message}
+*Enquiry Details:* ${message}
 -----------------------------------------
-_Sent from Digital Business Card_`;
+_Sent from Digital Business Card Enquiry Form_`;
 
-      const whatsappUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(formattedText)}`;
-      window.open(whatsappUrl, '_blank');
+      window.open(`https://wa.me/${targetNumber}?text=${encodeURIComponent(formattedText)}`, '_blank');
     }
 
-    // WhatsApp Share Button
+    // WhatsApp Direct Share
     function shareOnWhatsApp() {
       const currentUrl = window.location.href;
       const message = `*Shree Mahalaxmi Enterprises* (Kitchen Trolleys & Hardware):\n\n${currentUrl}`;
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
     }
 
     // Direct Share to 10-Digit Number
@@ -947,7 +1100,7 @@ _Sent from Digital Business Card_`;
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
 
-    // Download High-Resolution QR (1000x1000 px) for printing
+    // Download HD QR
     function downloadHDQR() {
       const currentUrl = window.location.href;
       const hdQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${encodeURIComponent(currentUrl)}`;
